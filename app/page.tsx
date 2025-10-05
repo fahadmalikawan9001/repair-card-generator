@@ -1,7 +1,8 @@
-"use client"
 
-import Index from "../frontend/src/index";
+"use client";
+
+import App from "../frontend/src/App";
 
 export default function SyntheticV0PageForDeployment() {
-  return <Index />;
+  return <App />;
 }

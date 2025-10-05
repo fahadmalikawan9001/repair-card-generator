@@ -9,7 +9,11 @@ app = FastAPI(title="Vehicle Parts Inventory System")
 # Enable CORS for React frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"], # Allow your React frontend
+    allow_origins=[
+    "http://localhost:3000",
+    "https://your-vercel-app-name.vercel.app"
+],
+, # Allow your React frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

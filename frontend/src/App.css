@@ -1,0 +1,337 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.header {
+  background-color: #2c3e50;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* Add styles for the new search bar and input. */
+.search-bar {
+  margin-bottom: 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar label {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+  max-width: 300px; /* Limit width for better aesthetics */
+}
+
+.search-input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #ecf0f1;
+  padding: 10px 0;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: #34495e;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.tabs button:hover {
+  background-color: #dfe6e9;
+}
+
+.tabs button.active {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.loading {
+  padding: 50px;
+  font-size: 1.5em;
+  color: #555;
+}
+
+/* General form styling */
+.form-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.form-container h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="number"]::placeholder,
+.form-group select::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+.submit-button {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #27ae60;
+}
+
+.submit-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* PartList specific styles */
+.part-list-container h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.part-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.part-table th,
+.part-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.part-table th {
+  background-color: #34495e;
+  color: white;
+  font-weight: bold;
+}
+
+.part-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.part-table tr:hover {
+  background-color: #e9e9e9;
+}
+
+.stock-input {
+  width: 80px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.update-stock-button {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+}
+
+.update-stock-button:hover {
+  background-color: #2980b9;
+}
+
+.update-stock-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* RestockAlerts specific styles */
+.alerts-container h2 {
+  color: #e74c3c;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.alert-list {
+  list-style: none;
+  padding: 0;
+}
+
+.alert-item {
+  background-color: #fdeded;
+  border: 1px solid #e74c3c;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.alert-item strong {
+  color: #c0392b;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.alert-item span {
+  color: #333;
+  font-size: 0.95em;
+}
+
+.alert-item .stock-level {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tabs button {
+    margin: 5px 10px;
+  }
+
+  .main-content {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .part-table,
+  .alerts-container {
+    overflow-x: auto;
+  }
+
+  .part-table th,
+  .part-table td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .stock-input {
+    width: 60px;
+  }
+
+  .update-stock-button {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+
+  /* Responsive adjustments for search bar */
+  .search-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-input {
+    width: 100%;
+    max-width: none;
+  }
+}
